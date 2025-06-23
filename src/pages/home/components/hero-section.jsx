@@ -19,8 +19,8 @@ const HeroSection = () => {
               style={{ transitionDelay: "400ms" }}
             >
               Code Together.
-              <br />
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
+
+              <span className="bg-gradient-to-r ml-6 from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Interview Better.
               </span>
             </h1>
@@ -51,7 +51,7 @@ const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transform hover:scale-105 transition-all duration-300"
+                className="w-full sm:w-auto border-gray-600 hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transform hover:scale-105 transition-all duration-300"
               >
                 Watch Demo
                 <Play className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />

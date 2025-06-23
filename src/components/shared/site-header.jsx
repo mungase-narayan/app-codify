@@ -1,21 +1,14 @@
 import { Code2, Menu } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Button } from "../ui/button"
 const SiteHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const [isVisible, setIsVisible] = useState(false)
-
-    useEffect(() => {
-        setIsVisible(true)
-    }, [])
     return(
         <header className="relative z-50 px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div
-              className={`flex items-center gap-2 transform transition-all duration-700 ${
-                isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
-              }`}
+              className={`flex items-center gap-2 transform transition-all duration-700`}
             >
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Code2 className="w-5 h-5 text-white" />
@@ -30,9 +23,7 @@ const SiteHeader = () => {
                   <a
                     key={item}
                     href={`#${item.toLowerCase()}`}
-                    className={`text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 transform ${
-                      isVisible ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"
-                    }`}
+                    className={`text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 transform`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     {item}
