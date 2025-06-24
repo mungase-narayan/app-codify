@@ -35,7 +35,7 @@ const HeroSection = () => {
           </Badge>
 
           <h1
-            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight transform transition-all duration-700 ${
+            className={`text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight transform transition-all duration-700 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
@@ -49,7 +49,7 @@ const HeroSection = () => {
           </h1>
 
           <p
-            className={`text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed transform transition-all duration-700 ${
+            className={`text-mg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed transform transition-all duration-700 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
@@ -62,7 +62,7 @@ const HeroSection = () => {
           </p>
 
           <div
-            className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-12 transform transition-all duration-700 ${
+            className={`flex sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-12 transform transition-all duration-700 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
@@ -71,7 +71,7 @@ const HeroSection = () => {
           >
             <Button
               size="lg"
-              className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-sm px-6 sm:px-8 py-3 sm:py-4 sm:text-lg rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
+              className="sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-sm px-6 sm:px-8 py-3 sm:py-4 sm:text-lg rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
             >
               Start Free Trial
               <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -79,7 +79,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transform hover:scale-105 transition-all duration-300"
+              className="sm:w-auto border-gray-600 text-gray-300 hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transform hover:scale-105 transition-all duration-300"
             >
               Watch Demo
               <Play className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />

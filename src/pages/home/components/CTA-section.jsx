@@ -21,7 +21,7 @@ const CtaSection = () => {
         >
           <Button
             size="lg"
-            className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
+            className="sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base rounded-4xl transform transition-all duration-300 hover:shadow-xl"
           >
             Start Your Free Trial
             <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -29,7 +29,7 @@ const CtaSection = () => {
           <Button
             size="lg"
             variant="outline"
-            className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transform hover:scale-105 transition-all duration-300"
+            className="sm:w-auto border-gray-600 hover:bg-gray-200 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-4xl transform transition-all duration-300"
           >
             Schedule Demo
           </Button>

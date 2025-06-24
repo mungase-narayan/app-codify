@@ -68,7 +68,7 @@ const FeaturesSection = () => {
               title: "Multiple Languages",
               description:
                 "Support for 20+ programming languages with syntax highlighting and auto-completion.",
-              color: "indigo",
+              color: "gray",
               delay: "0.5s",
             },
           ].map((feature) => (
@@ -78,10 +78,10 @@ const FeaturesSection = () => {
               style={{ animationDelay: feature.delay }}
             >
               <div
-                className={`w-10 sm:w-12 h-10 sm:h-12 bg-${feature.color}-600/20 rounded-lg flex items-center justify-center  group-hover:scale-110 transition-transform duration-300`}
+                className={`bg-gray-900/80 w-10 sm:w-12 h-10 sm:h-12 rounded-lg flex items-center justify-center  group-hover:scale-110 transition-transform duration-300`}
               >
                 <feature.icon
-                  className={`w-5 sm:w-6 h-5 sm:h-6 text-${feature.color}-400 group-hover:animate-pulse`}
+                  className={`w-5 sm:w-6 h-5 sm:h-6 text-${feature.color}-400`}
                 />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
