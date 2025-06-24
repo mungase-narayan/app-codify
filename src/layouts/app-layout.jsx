@@ -1,4 +1,3 @@
-import SiteHeader from "@/components/shared/site-header";
 import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
