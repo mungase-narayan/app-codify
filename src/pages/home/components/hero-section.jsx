@@ -1,15 +1,17 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
   ArrowRight,
-  Clock,
   Lightbulb,
   Mic,
   Play,
   Star,
   Users,
+  Zap,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import SessionTime from "./session-time";
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -20,6 +22,18 @@ const HeroSection = () => {
     <section className="relative px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
+          <Badge
+            className={`bg-purple-600/20 text-purple-300 border-purple-500/30 mb-6 transform transition-all duration-700 hover:scale-105 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
+            }`}
+            style={{ transitionDelay: "200ms" }}
+          >
+            <Zap className="w-4 h-4 mr-2" />
+            Real-time Collaboration
+          </Badge>
+
           <h1
             className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight transform transition-all duration-700 ${
               isVisible
@@ -29,7 +43,7 @@ const HeroSection = () => {
             style={{ transitionDelay: "400ms" }}
           >
             Code Together.
-            <span className="bg-gradient-to-r ml-6 from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="ml-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Interview Better.
             </span>
           </h1>
@@ -57,7 +71,7 @@ const HeroSection = () => {
           >
             <Button
               size="lg"
-              className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
+              className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-sm px-6 sm:px-8 py-3 sm:py-4 sm:text-lg rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
             >
               Start Free Trial
               <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -65,7 +79,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto border-gray-600 hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transform hover:scale-105 transition-all duration-300"
+              className="w-full sm:w-auto border-gray-600 text-gray-300 hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transform hover:scale-105 transition-all duration-300"
             >
               Watch Demo
               <Play className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
@@ -85,7 +99,7 @@ const HeroSection = () => {
                 {[...Array(4)].map((_, i) => (
                   <div
                     key={i}
-                    className={`w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border border-gray-400 transform transition-all duration-500 hover:scale-110`}
+                    className={`w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-2 border-slate-900 transform transition-all duration-500 hover:scale-110`}
                     style={{
                       animationDelay: `${i * 200}ms`,
                     }}
@@ -99,6 +113,9 @@ const HeroSection = () => {
                 <Star
                   key={i}
                   className={`w-4 h-4 fill-yellow-400 text-yellow-400 transform transition-all duration-300 hover:scale-125`}
+                  style={{
+                    animationDelay: `${i * 100}ms`,
+                  }}
                 />
               ))}
               <span className="text-sm ml-2">4.9/5 rating</span>
@@ -117,17 +134,17 @@ const HeroSection = () => {
         >
           <Card className="bg-gray-900/50 backdrop-blur-sm border-gray-700 rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
             {/* Editor Header */}
-            <div className="bg-gray-800/80 px-4 sm:px-6 py-4 border-b border-gray-700">
+            <div className="bg-gray-800/80 px-4 sm:px-6 py-2 border-b border-gray-700">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-4">
                   <div className="flex gap-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     <div
-                      className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"
+                      className="w-3 h-3 bg-yellow-500 rounded-full"
                       style={{ animationDelay: "0.2s" }}
                     ></div>
                     <div
-                      className="w-3 h-3 bg-green-500 rounded-full animate-pulse"
+                      className="w-3 h-3 bg-green-500 rounded-full"
                       style={{ animationDelay: "0.4s" }}
                     ></div>
                   </div>
@@ -148,7 +165,7 @@ const HeroSection = () => {
                     size="sm"
                     className="bg-blue-600 hover:bg-blue-700 transform hover:scale-105 transition-all duration-200"
                   >
-                    <Mic className="w-4 h-4 mr-2" />
+                    <Mic className="w-4 h-4" />
                     <span className="hidden sm:inline">Voice Call</span>
                     <span className="sm:hidden">Call</span>
                   </Button>
@@ -222,29 +239,22 @@ const HeroSection = () => {
             </div>
 
             {/* Chat/Hints Panel */}
-            <div className="bg-gray-800/50 border-t border-gray-700 p-4">
+            <div className="bg-gray-800/50 flex items-center justify-between border-t border-gray-700 p-4">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                 <div className="flex items-center gap-2 text-yellow-400">
-                  <Lightbulb className="w-4 h-4 animate-pulse" />
+                  <Lightbulb className="w-4 h-4" />
                   <span className="text-sm">Hint available</span>
                 </div>
                 <div className="flex items-center gap-2 text-red-400">
-                  <div className="w-2 h-2 bg-red-400 rounded-full animate-ping"></div>
+                  <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
                   <span className="text-sm">Recording</span>
                 </div>
               </div>
+              <div>
+                <SessionTime />
+              </div>
             </div>
           </Card>
-
-          {/* Floating elements */}
-          <div className="absolute -bottom-2 sm:-bottom-4 -right-2 sm:-right-4 bg-purple-600 text-white p-2 sm:p-3 rounded-lg shadow-lg animate-pulse">
-            <div className="flex items-center gap-2">
-              <Clock className="w-3 sm:w-4 h-3 sm:h-4" />
-              <span className="text-xs sm:text-sm font-medium">
-                Session: 23:45
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
