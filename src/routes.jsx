@@ -8,15 +8,15 @@ import HomePage from "./pages/home";
 const AppRoutes = () => {
   return (
     <BrowserRouter>
-    <Routes>
-        <Route path="/" element={<RootLayout/>}>
-            <Route element={<AppLayout/>}>
-                <Route index element={<HomePage/>} />
-            </Route>
+      <Routes>
+        <Route path="/" element={<RootLayout />}>
+          <Route element={<AppLayout />}>
+            <Route index element={<HomePage />} />
+          </Route>
         </Route>
-    </Routes>
+      </Routes>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default AppRoutes
+export default AppRoutes;
