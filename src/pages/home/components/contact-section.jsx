@@ -1,22 +1,21 @@
-"use client";
-
+import { z } from "zod";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+
 import {
   Mail,
-  Phone,
   MapPin,
   MessageCircle,
   Send,
   CheckCircle,
   AlertCircle,
 } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+
 import { CiLinkedin, CiTwitter, CiYoutube } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
-import { z } from "zod";
 
-// Zod schema for form validation
 const contactSchema = z.object({
   name: z
     .string()
@@ -116,7 +115,6 @@ export default function ContactSection() {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
-      // Here you would typically send the data to your backend
       console.log("Form submitted:", formData);
 
       setIsSubmitted(true);
@@ -145,13 +143,6 @@ export default function ContactSection() {
       color: "blue",
     },
     {
-      icon: Phone,
-      title: "Phone",
-      value: "+1 (555) 123-4567",
-      description: "Mon-Fri from 8am to 6pm",
-      color: "green",
-    },
-    {
       icon: MapPin,
       title: "Office",
       value: "San Francisco, CA",
@@ -168,10 +159,10 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { icon: CiTwitter, href: "#", label: "Twitter", color: "blue" },
-    { icon: CiLinkedin, href: "#", label: "LinkedIn", color: "blue" },
+    { icon: CiTwitter, href: "#", label: "Twitter", color: "gray" },
+    { icon: CiLinkedin, href: "#", label: "LinkedIn", color: "gray" },
     { icon: FaGithub, href: "#", label: "GitHub", color: "gray" },
-    { icon: CiYoutube, href: "#", label: "YouTube", color: "red" },
+    { icon: CiYoutube, href: "#", label: "YouTube", color: "gray" },
   ];
 
   if (isSubmitted) {
@@ -243,7 +234,7 @@ export default function ContactSection() {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 ${
+                    className={`w-full px-4 py-2 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 ${
                       errors.name
                         ? "border-red-500 focus:ring-red-500"
                         : "border-gray-600 focus:ring-blue-500"
@@ -267,7 +258,7 @@ export default function ContactSection() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 ${
+                    className={`w-full px-4 py-2 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 ${
                       errors.email
                         ? "border-red-500 focus:ring-red-500"
                         : "border-gray-600 focus:ring-blue-500"
@@ -294,7 +285,7 @@ export default function ContactSection() {
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 ${
+                    className={`w-full px-4 py-2 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 ${
                       errors.company
                         ? "border-red-500 focus:ring-red-500"
                         : "border-gray-600 focus:ring-blue-500"
@@ -320,7 +311,7 @@ export default function ContactSection() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 ${
+                    className={`w-full px-4 py-2 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 ${
                       errors.phone
                         ? "border-red-500 focus:ring-red-500"
                         : "border-gray-600 focus:ring-blue-500"
@@ -345,7 +336,7 @@ export default function ContactSection() {
                   rows={4}
                   value={formData.message}
                   onChange={handleInputChange}
-                  className={`w-full px-4 py-3 bg-gray-800 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 resize-none ${
+                  className={`w-full px-4 py-2 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300 resize-none ${
                     errors.message
                       ? "border-red-500 focus:ring-red-500"
                       : "border-gray-600 focus:ring-blue-500"
@@ -414,7 +405,7 @@ export default function ContactSection() {
               {contactInfo.map((info, index) => (
                 <div
                   key={info.title}
-                  className={`flex items-start gap-4 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105 animate-fadeInUp`}
+                  className={`flex items-start gap-4 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105 border border-gray-800/30 hover:border-gray-200/30 animate-fadeInUp`}
                   style={{ animationDelay: `${0.8 + index * 0.1}s` }}
                 >
                   <div
