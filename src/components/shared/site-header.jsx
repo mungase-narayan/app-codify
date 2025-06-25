@@ -37,6 +37,8 @@ const SiteHeader = () => {
             <Button
               size={"sm"}
               variant="outline"
+              href="/auth/sign-in"
+              onClick={() => setIsMenuOpen(false)}
               className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 hover:text-white sm:px-8 py-3 sm:py-2 rounded-4xl transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
             >
               Sign In
