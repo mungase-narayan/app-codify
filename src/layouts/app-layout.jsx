@@ -1,3 +1,4 @@
+import Footer from "@/components/shared/footer";
 import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
@@ -6,7 +7,9 @@ const AppLayout = () => {
       <div className="flex flex-1 flex-col">
         <Outlet />
       </div>
-      <div className="flex justify-center">Footer</div>
+      <div className="flex justify-center">
+        <Footer />
+      </div>
     </div>
   );
 };
