@@ -29,7 +29,7 @@ const CtaSection = () => {
           <Button
             size="lg"
             variant="outline"
-            className="sm:w-auto border-gray-600 hover:bg-gray-200 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-4xl transform transition-all duration-300"
+            className="sm:w-auto border-gray-600 text-gray-600 hover:bg-gray-200 px-6 sm:px-8 py-3 sm:py-4 text-base rounded-4xl transform transition-all duration-300"
           >
             Schedule Demo
           </Button>
